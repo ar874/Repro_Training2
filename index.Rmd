@@ -1,0 +1,101 @@
+---
+title: "Repro R"
+author: Alice
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+
+---
+
+# Introduction {#Introduction}
+This is an introduction
+
+## Subheading
+Information about carbon
+
+### More Subheadings
+More information _d_^13^C
+
+Can break up sentences in **two** ways: _backslash_ or `double space`
+
+**bold** or __bold__\
+*italics* or _italics_\
+^up^ ^up^ ^up^\
+~down~ ~down~ ~down~\
+`oldschool`\
+~~strike~~\
+
+## Links
+
+Creating links, going back to [Introduction](#Introduction) (make sure there are no spaces)
+
+Website link [google](google.co.uk)
+
+This text needs a footnote [^1]
+
+[^1]: this is a footnote - make sure spaces are correct
+
+## Lists
+
+Ordered lists take numbers, use 4 spaces to create sublists
+
+1. Item a
+2. Item b
+    a. Item b1
+    b. Item b2
+3. Item c
+
+Unordered lists
+
+* item a
+* item b
+* item c
+
+
+## Inserting Images
+
+Using 'copy image location', or link to file you have in your working directory
+
+![R logo](https://cambiotraining.github.io/ReproducibilityR_Feb2020/img/Rlogo.png)
+
+
+## Tables
+
+| Col 1 | Col 2 |
+|-------|-------|
+|data 1 | data 2|
+|data 11| data22|
+
+
+## Quotes/Blocks
+
+> Quote example
+
+Can make code blocks
+
+```
+Code block
+read.csv("data.txt")
+This is just text though, will not run
+```
+ctrl+alt+I = actual r code which you can run, can also go to menu>code>insertchunk\
+Will give you the code AND the result
+
+```{r}
+75*8
+```
+
+```{r}
+calculation_output <-100*2
+calculation_output
+calculation_output*5
+```
+
+# Example with data
+```{r}
+download.file(url="https://raw.githubusercontent.com/cambiotraining/reproducibility-training/master/data/gapminder_data.csv", destfile="data/gapminder_data.csv")
+```
+
+
